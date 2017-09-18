@@ -1,0 +1,65 @@
+#header {
+  color: black;
+}
+
+#promotions {
+  width: 100%;
+}
+
+body {
+  width: 100%;
+}
+
+#back-button {
+  position: relative;
+  right: 50%
+}
+
+table {
+  margin: auto;
+  width: 70%;
+  /*border: 1px solid black;*/
+}
+
+th {
+  width: 50%;
+  /*border: 1px solid black;*/
+}
+
+td {
+  width: 50%;
+  /*border: 1px solid black;*/
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+a#location {
+  color: black;
+}
+
+
+/*.preloader-wrapper {
+  visibility: hidden;
+}*/
+
+nav {
+  background-color: black;
+  width: 100%;
+}
+
+#buttons {
+  width: 19%;
+  margin:auto;
+  margin-top: 70px;
+
+}
+
+/*#scrape-button {
+  margin: auto;
+}*/
+
+.preloader-wrapper {
+  margin-top: 80px;
+}
