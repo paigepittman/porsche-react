@@ -23,7 +23,7 @@ var PORT = process.env.PORT || 4000;
 
 var databaseUri = 'mongodb://localhost/myapp2';
 if (process.env.MONGODB_URI) {
-  mongoose.connect('mongodb://heroku_dmq351qc:aimougmur9vm8jicoou41eiudt@ds161121.mlab.com:61121/heroku_dmq351qc');
+  mongoose.connect('mongodb://heroku_864ml70x:pber0e5dbia0r2qj4u95pjlrgq@ds139984.mlab.com:39984/heroku_864ml70x');
 }
 else {
   mongoose.connect(databaseUri);
@@ -190,7 +190,7 @@ app.get("/promotions", function(req, res) {
 });
 ///////////////////////////////////////////////////////////////////
 
-
+//MONGODB_URI: mongodb://heroku_864ml70x:pber0e5dbia0r2qj4u95pjlrgq@ds139984.mlab.com:39984/heroku_864ml70x
 
 
 //GRABS SPECIFIC STORES///
