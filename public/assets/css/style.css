@@ -6,8 +6,13 @@
   width: 100%;
 }
 
+a.brand-logo {
+  font-size: 50px;
+}
+
 body {
   width: 100%;
+  background-color: black;
 }
 
 #back-button {
@@ -18,8 +23,12 @@ body {
 table {
   margin: auto;
   width: 70%;
+
+
   /*border: 1px solid black;*/
 }
+
+
 
 th {
   width: 50%;
@@ -27,12 +36,23 @@ th {
 }
 
 td {
+
   width: 50%;
+  border-radius: 0px;
   /*border: 1px solid black;*/
 }
 
+
+
 tr:nth-child(odd) {
-  background-color: #f2f2f2;
+  background-color: #6c6a6a;
+}
+
+tr:nth-child(even) {
+  background-color: #575757;
+}
+th {
+  color: white;
 }
 
 a#location {
@@ -45,8 +65,11 @@ a#location {
 }*/
 
 nav {
-  background-color: black;
+  background-color: rgb(29, 29, 29);
   width: 100%;
+  height: 120px;
+  padding-top: 25px;
+  padding-left: 10px;
 }
 
 #buttons {
