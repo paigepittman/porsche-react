@@ -42,50 +42,29 @@ db.once("open", function() {
 
 
 
-
-
-// Routes //
-
-// app.get("/stores", function(req, res) {
-//
-// });
-
-
-// Promotion.collection.drop();
+//Promotion.collection.drop();
 
 
 
 app.get("/scrape", function(req, res) {
   var count = 1;
-  // console.log(urls);
-
 
   urls.forEach(function(el) {
 
     request(el, function(error, response, html) {
-      // console.log(this.uri)
       var hostString = this.uri.host.replace(".com", "");
       var porscheString = hostString.replace("porsche", "");
       var periodString = porscheString.replace(".", "");
       var dashString = periodString.replace("-", " ");
       var dealerString = dashString.replace("dealer", "");
       var finalLocation = dealerString.replace("www", "");
-
-      // if (dealerString.startsWith("of") {
-      //   var ofString = dealerString.replace("www", "");
-      //   finalLocation = ofString.replace("of", "");
-      // })
-      //   finalLocation = dealerString.replace("www", "");
-
-
-
-
       var host = this.uri.host;
       var site;
       var result = {};
       var locationResult = {};
       var promosArray = [];
       var category;
+
       //formatting for various host strings
       if (host.startsWith("www")) {
 
@@ -114,11 +93,7 @@ app.get("/scrape", function(req, res) {
         category = "parts";
       };
 
-
-
-
       var imageURL = "https://" + site.slice(12);
-      // console.log (imageURL);
 
       var $ = cheerio.load(html);
       //grabbing each "specials" div
@@ -141,9 +116,7 @@ app.get("/scrape", function(req, res) {
           result.location = location;
           result.image = imageURL + image;
           result.category = category;
-          // console.log(result);
 
-          // need to create if statements to cut out any random unncessary promos before they reach the DB
           var entry = new Promotion(result);
 
             entry.save(function(err, doc) {
@@ -172,26 +145,14 @@ app.get("/promotions", function(req, res) {
   Promotion.find({}, function(error, doc) {
     // Log any errors
     if (error) {
-      console.log(error// Or send the doc to the browser as a json object
+      console.log(error
       );
     } else {
-      //grabbing the number of each location's promos to return to AllStores component
-      // doc.forEach(function(el) {
-      //
-      //   if (locations.indexOf(el.location) === -1) {
-      //     locations.push(el.location);
-      //     var locationPromos = promoCheck(el.location);
-      //
-      //     }
-      //   });
       res.json(doc);
     }
   });
 });
 ///////////////////////////////////////////////////////////////////
-
-//MONGODB_URI: mongodb://heroku_864ml70x:pber0e5dbia0r2qj4u95pjlrgq@ds139984.mlab.com:39984/heroku_864ml70x
-
 
 //GRABS SPECIFIC STORES///
 app.get("/promotions/:location?", function(req, res) {
@@ -201,7 +162,7 @@ app.get("/promotions/:location?", function(req, res) {
   Promotion.find({location: req.params.location}, function(error, doc) {
     // Log any errors
     if (error) {
-      console.log(error// Or send the doc to the browser as a json object
+      console.log(error
       );
     } else {
       console.log("****************************", doc);
@@ -210,12 +171,13 @@ app.get("/promotions/:location?", function(req, res) {
   });
 });
 
+
+//returns each store and how many promos they have as an object
 app.get("/totals", function(req, res) {
-  // Grab every doc in the Promotions array
   Promotion.find({}), function(error, doc) {
     // Log any errors
     if (error) {
-      console.log(error// Or send the doc to the browser as a json object
+      console.log(error
       );
     } else {
       var locations = []

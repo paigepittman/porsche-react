@@ -10,7 +10,9 @@ class AllStores extends React.Component {
       results: [],
       storeClicked: ""
     };
-    this.handleClick = this.handleClick.bind(this);
+    this.sortAlpha = this.sortAlpha.bind(this);
+    this.sortTotals = this.sortTotals.bind(this);
+
   }
 
 
@@ -37,9 +39,23 @@ class AllStores extends React.Component {
     }.bind(this))
   }
 
-  handleClick() {
+  sortAlpha() {
 
-    {/* change the state of storeclicked to the store that was clicked and go to store page */}
+var alphaArray = this.state.results
+var sorted = alphaArray.sort((a, b) => a.name.localeCompare(b.name));
+this.setState({results: sorted})
+console.log(sorted);
+
+  }
+
+  sortTotals() {
+
+    const totalsArray = this.state.results
+    var sorted = totalsArray.sort(function(a, b){return a.total-b.total});  
+
+    console.log(sorted)
+    this.setState({results: sorted})
+
   }
 
 
@@ -49,8 +65,8 @@ class AllStores extends React.Component {
           <div id="wrapper">
             <center><h3 id="header">My Stores</h3></center>
             <table>
-              <th>location</th>
-              <th>total promotions</th>
+              <th onClick={this.sortAlpha}>location</th>
+              <th onClick={this.sortTotals}>total promotions</th>
               {this.state.results.map(function(store, i) {
                 var url = "/Store/" + store.name
                 if (store.total < 5) {
@@ -73,6 +89,6 @@ class AllStores extends React.Component {
     }
   }
 const styles = {
-  low: {'background-color':'rgb(236, 114, 99)'}
+  low: {'background-color':'rgb(214, 45, 45)'}
 }
 export default AllStores;
