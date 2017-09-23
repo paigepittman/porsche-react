@@ -42,7 +42,7 @@ db.once("open", function() {
 
 
 
-//Promotion.collection.drop();
+Promotion.collection.drop();
 
 
 
