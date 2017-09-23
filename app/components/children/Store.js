@@ -30,7 +30,7 @@ class Store extends React.Component {
       <div id="wrapper">
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li>
-            <Link to="/AllStores" className="waves-effect waves-light btn-large blue" id="back-button">view my stores</Link>
+            <Link to="/AllStores" className="waves-effect waves-light btn blue" id="back-button">view my stores</Link>
           </li>
         </ul>
 
@@ -46,7 +46,7 @@ class Store extends React.Component {
             var promoSplit = promo.promo.split(" ", 8);
             var promoShort = promoSplit.join(" ") + "...";
         return (
-          
+
            <tr key={i}>
              <td>{promo.title}</td>
              <td value={promo.promo} onClick= {this.fullPromo}>{promoShort}</td>
