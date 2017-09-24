@@ -2,6 +2,11 @@
   color: black;
 }
 
+#store-selected {
+  color: white;
+  font-size: 18px;
+}
+
 #promotions {
   width: 100%;
 }
@@ -85,4 +90,64 @@ nav {
 
 .preloader-wrapper {
   margin-top: 80px;
+}
+
+
+@media screen and (max-width: 415px) {
+
+  a.brand-logo {
+    font-size: 20px;
+    width: 55%;
+
+  }
+
+  nav {
+    background-color: rgb(29, 29, 29);
+    height: 80px;
+    padding-top: 10px;
+    padding-left: 0px;
+  }
+
+
+.waves-effect {
+
+width: 300%;
+position: relative;
+right: 95%;
+
+}
+
+#store-table {
+
+width: 100%;
+}
+
+img {
+  width: 100%;
+}
+#store-table th {
+  width: 20%;
+}
+
+#store-table td {
+  width: 20%;
+}
+
+}
+
+@media screen and (max-width: 415px) {
+
+  a.brand-logo {
+    font-size: 20px;
+    width: 60%;
+
+  }
+
+  nav {
+    background-color: rgb(29, 29, 29);
+    height: 80px;
+    padding-top: 10px;
+    padding-left: 0px;
+  }
+
 }

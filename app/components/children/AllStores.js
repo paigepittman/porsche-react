@@ -51,7 +51,7 @@ console.log(sorted);
   sortTotals() {
 
     const totalsArray = this.state.results
-    var sorted = totalsArray.sort(function(a, b){return a.total-b.total});  
+    var sorted = totalsArray.sort(function(a, b){return a.total-b.total});
 
     console.log(sorted)
     this.setState({results: sorted})
@@ -63,8 +63,7 @@ console.log(sorted);
     return (
 
           <div id="wrapper">
-            <center><h3 id="header">My Stores</h3></center>
-            <table>
+            <table id="all-store-table">
               <th onClick={this.sortAlpha}>location</th>
               <th onClick={this.sortTotals}>total promotions</th>
               {this.state.results.map(function(store, i) {

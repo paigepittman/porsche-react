@@ -35,13 +35,13 @@ class Store extends React.Component {
         </ul>
 
 
-        <center><h3 id="store-selected">{this.state.storeName}</h3></center>
+        <center><span id="store-selected">{this.state.storeName}</span></center>
 
-        <table>
+        <table id="store-table">
           <th>title</th>
           <th>promo</th>
           <th>category</th>
-          <th>image</th>
+          <th id="images">image</th>
           {this.state.storeData.map(function(promo, i) {
             var promoSplit = promo.promo.split(" ", 8);
             var promoShort = promoSplit.join(" ") + "...";
