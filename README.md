@@ -29,23 +29,21 @@ node server.js
 
 ### Landing Page
 
-Search for your representative by name
-![Screenshot](public/assets/images/landing.png)
+press scan button to run scrape and save all new promotions to the database
+![Screenshot](public/landing.png)
 
 
 ### All Stores
 
-View all congressional districts by map
-![Screenshot](public/assets/images/map-view.png)
 
-Click through districts to quick view representatives or follow the link to their full profile
-![Screenshot](public/assets/images/map-rep.png)
+view all stores alphabetically or by number of promotions - stores with three or less appear in red. Click on store to view all store info.
+![Screenshot](public/allstores.png)
 
 
 ### Store Info
 
-View representatives' full profiles with contact info and recent legislation
-![Screenshot](public/assets/images/rep-view.png)
+View all store specials title, category and the image attached to the promotion
+![Screenshot](public/store.png)
 
 
 ## Deployment
