@@ -17,7 +17,7 @@ a.brand-logo {
 
 body {
   width: 100%;
-  background-color: black;
+  background-color: white;
 }
 
 #back-button {
@@ -44,20 +44,22 @@ td {
 
   width: 50%;
   border-radius: 0px;
+  font-size: 20px;
   /*border: 1px solid black;*/
 }
 
 
 
 tr:nth-child(odd) {
-  background-color: #6c6a6a;
+  background-color: rgb(210, 207, 207);
 }
 
 tr:nth-child(even) {
-  background-color: #575757;
+  background-color: white;
 }
 th {
-  color: white;
+  color: black;
+  font-size: 24px;
 }
 
 a#location {
